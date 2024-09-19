@@ -118,7 +118,7 @@ func (t *Target) Dump(out elfwriter.WriteCloserSeeker, flags DumpFlags, state *D
 	fhdr.Version = elf.EV_CURRENT
 
 	switch bi.GOOS {
-	case "linux":
+	case "linux", "android":
 		fhdr.OSABI = elf.ELFOSABI_LINUX
 	case "freebsd":
 		fhdr.OSABI = elf.ELFOSABI_FREEBSD

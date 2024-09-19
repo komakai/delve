@@ -1631,7 +1631,7 @@ func (p *gdbProcess) loadGInstr() ([]byte, error) {
 	case "windows", "darwin", "freebsd":
 		// mov rcx, QWORD PTR gs:{uint32(off)}
 		op = []byte{0x65, 0x48, 0x8b, 0x0c, 0x25}
-	case "linux":
+	case "linux", "android":
 		// mov rcx,QWORD PTR fs:{uint32(off)}
 		op = []byte{0x64, 0x48, 0x8B, 0x0C, 0x25}
 	default:

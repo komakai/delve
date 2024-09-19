@@ -619,7 +619,7 @@ func (conn *gdbConn) step(th *gdbThread, tu *threadUpdater, ignoreFaultSignal bo
 
 	var _SIGBUS uint8
 	switch conn.goos {
-	case "linux":
+	case "linux", "android":
 		_SIGBUS = 0x7
 	case "darwin":
 		_SIGBUS = 0xa

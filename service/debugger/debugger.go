@@ -2491,7 +2491,7 @@ func verifyBinaryFormat(exePath string) (string, error) {
 	switch runtime.GOOS {
 	case "darwin":
 		exe, err = macho.NewFile(f)
-	case "linux", "freebsd":
+	case "linux", "freebsd", "android":
 		exe, err = elf.NewFile(f)
 	case "windows":
 		exe, err = pe.NewFile(f)

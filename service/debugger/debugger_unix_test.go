@@ -27,6 +27,7 @@ func TestDebugger_LaunchNoExecutablePerm(t *testing.T) {
 		"windows": "linux",
 		"freebsd": "windows",
 		"linux":   "windows",
+		"android":   "windows",
 	}
 	if runtime.GOARCH == "arm64" && runtime.GOOS == "linux" {
 		t.Setenv("GOARCH", "amd64")

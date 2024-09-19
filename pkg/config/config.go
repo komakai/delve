@@ -13,8 +13,8 @@ import (
 )
 
 const (
-	configDir       string = "dlv"
-	configDirHidden string = ".dlv"
+	configDir       string = "/data/delve/dlv"
+	configDirHidden string = "/data/delve/.dlv"
 	configFile      string = "config.yml"
 
 	PositionSource      = "source"
